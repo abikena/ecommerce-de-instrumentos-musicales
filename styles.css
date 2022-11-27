@@ -1,0 +1,28 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.primerTitulo {
+    text-align: center;
+    text-transform: uppercase;
+    height: 200px;
+    background-image: url("./imagenes/momento-verdad-ventas.jpg");
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+p {
+    text-align: left;
+    text-decoration-line: underline;
+    color: black;
+    background-color: blanchedalmond;
+}
+
+#subtitulo {
+    text-transform: capitalize;
+    color: brown;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+
