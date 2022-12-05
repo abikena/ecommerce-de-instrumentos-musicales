@@ -1,55 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desarrollador de pagina istrumentos</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-   <header>
-    <nav>
-        <ul>
-            <li>
-                <a href="./index.html">Inicio</a>
-            </li>
-            <li>
-                <a href="./nuestra-tienda.html">¿Quienes somos?</a>
-            </li>
-            <li>
-                <a href="./productos.html">Productos</a>
-            </li>
-            <li>
-                <a href="./contacto.html">Contacto</a>
-            </li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desarrollador de pagina instrumentos musicales</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navegacion">
+        <ul class="barraNav">
+          <li class="nav">
+            <a href="./index.html">Inicio</a>
+          </li>
+          <li class="nav">
+            <a href="./nuestra-tienda.html">¿Quienes somos?</a>
+          </li>
+          <li class="nav">
+            <a href="./productos.html">Productos</a>
+          </li>
+          <li class="nav">
+            <a href="./contacto.html">Contacto</a>
+          </li>
+          <li class="nav">
+            <input type="text" name="busqueda" id="busqueda" placeholder="Buscar">
+          </li>
+          <li class="nav">
+            <button class="boton1">Carrito</button>
+          </li>
         </ul>
-    </nav>
-    <div>
-        <img src="imagenes/yamaha.JPG" alt="logos">
-    </div>
-    <div>
+      </nav>
+      <div class="logo">
+        <img src="./imagenes/logo.png" width="180px" alt="">
+      </div>
+      <div>
         <audio controls autoplay>
-            <source src="./Audio/Música Alegre Para Videos   Música de Fondo Feliz   Música Instrumental.mp3" type="">
+          <source
+            src="./Audio/Música Alegre Para Videos   Música de Fondo Feliz   Música Instrumental.mp3"
+            type=""
+          />
         </audio>
-    </div>
-   </header>
-   <main>
-    <section>
-        <h1 class="primerTitulo">Venta de instrumentos musicales</h1>
-        <p>Estamos a sus oredenes, cualquier duda o pregunta no dude en contactarse con nostros, con gusto le antenderemos</p>
-    </section>
-    <section>
-        <h2 id="subtitulo">Preparacion en</h2>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h1 class="principal">TIENDA OFICIAL</h1>
+        <p class="eslogan">El instrumento no hace al musico, pero siempre sera su mejor complemento</p>
+      </section>
+      <section>
+        <h2 class="segundoTitulo">Venta de instrumentos musicales</h1>
+        <p class="segundo">
+          Somos una pagina confiable, en donde podras encontrar los mejores instrumentos musicales a un precio demasiado accesible. Aqui podra encontrar informacion de nuestros productos, ofertas, precios y mas, cualquier duda o pregunta que tenga contactese con nosotros, estamos para ayudarlo. IMPORTANTE. Tenga cuidado con aquellas paginas engañosas, tenga en cuenta que esta es nuetra pagina oficial, la unica en donde podra hacer sus compras por linea, contamos con otros medios de comunicacion como facebook que es unicamente para proporcionarle informacion. Sea precavido, no se deje engañar. 
+        </p>
+      </section>
+      <section>
+        <h3 id="subtitulo">Preparacion en</h2>
         <ol>
-            <li id="htmlLista">Instalacion de los instrumentos</li>
-            <li>Conocimiento profundo de instrumentos musicales</li>
-            <li>Saber tocar cada uno de los instrumentos que ofrecemos</li>
+          <li id="htmlLista">Instalacion de los instrumentos</li>
+          <li>Conocimiento profundo de instrumentos musicales</li>
+          <li>Saber tocar cada uno de los instrumentos que ofrecemos</li>
         </ol>
-    </section>
-    <aside>
-        <img src="https://assets.mofoprod.net/network/images/whatsapp_logo.original.jpg" alt="Logo de whatsApp">
-    </aside>
-   </main>
-</body>
+      </section>
+      <div class="galeria">
+        <div>
+          <img class="imag1" src="./imagenes/amplificador.jpg" alt="">
+          <button>Agregar al carrito de compras</button>
+          <button>Detalles</button>
+        </div>
+        <div>
+          <img class="imag2" src="./imagenes/bajo babilon.webp" alt="">
+          <button>Agregar al carrito de compras</button>
+          <button>Detalles</button>
+        </div>
+        <div>
+          <img class="imag3" src="./imagenes/bateria yamaha.jpg" alt="">
+          <button>Agregar al carrito de compras</button>
+          <button>Detalles</button>
+        </div>
+        <div>
+          <img class="imag4" src="./imagenes/guitarra yamaha.jpg" alt="">
+          <button>Agregar al carrito de compras</button>
+          <button>Detalles</button>
+        </div>
+        <div>
+          <img class="imag5" src="./imagenes/microfono steren.jpg" alt="">
+          <button>Agregar al carrito de compras</button>
+          <button>Detalles</button>
+        </div>
+        <div>
+          <img class="imag6" src="./imagenes/teclado casio.jpg" alt="">
+          <button>Agregar al carrito de compras</button>
+          <button>Detalles</button>
+        </div>
+        <div>
+          <img class="imag7" src="./imagenes/trompeta.jpg" alt="">
+          <button>Agregar al carrito de compras</button>
+          <button>Detalles</button>
+        </div>
+        <div>
+          <img class="imag8" src="./imagenes/cable 22.jpg" alt="">
+          <button>Agregar al carrito de compras</button>
+          <button>Detalles</button>
+        </div>
+      </div>
+      <aside>
+        <img
+          src="https://assets.mofoprod.net/network/images/whatsapp_logo.original.jpg"
+          alt="Logo de whatsApp"
+        />
+      </aside>
+    </main>
+  </body>
 </html>
