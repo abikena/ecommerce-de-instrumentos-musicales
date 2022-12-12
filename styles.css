@@ -1,176 +1,266 @@
 *{
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
+  }
+  
+  .navegacion {
+      height: 25px;
+      background-color: rgb(2, 2, 2);
+      border 5px;
+  }
+  
+  .barraNav {
+      display: flex;
+      justify-content: space-evenly;
+  }
+  
+  .nav {
+      flex-grow: 1;
+      flex-shrink: 1;
+      display: inline;
+      border-style: solid;
+  }
+  
+  .nav:hover a {
+  background-color: aquamarine;
+  color: black;
+  }
+  
+  .boton1 {
+      color: azure;
+      background-color: green;
+      font-size: 15px;
+  }
+  .boton1:active{
+      color: azure;
+      background-color: blue;
+      font-size: 30px;
+  }
+  
+  .logo {
+      text-align: right;
+      
+  }
+  
+  .principal {
+      text-align: center;
+      font-size: 80px;
+      text-transform: uppercase;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: rgb(168, 39, 39);
+  }
+  
+  .eslogan {
+      text-align: center;
+      color: rgb(35, 190, 74);
+      font-family: fantasy;
+      font-size: 50px;
+      height: 150px;
+      background-image: url(https://i.blogs.es/9b8259/blur-bowed-stringed-instrument-close-up-1029411/450_1000.jpg);
+  }
+  
+  .segundoTitulo {
+      text-align: center;
+      text-transform: uppercase;
+      height: 200px;
+      background-image: url("./imagenes/momento-verdad-ventas.jpg");
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  .segundoTitulo::first-letter {
+      color: red;
+  }
+  
+  .segundo {
+      text-align: justify;
+      text-decoration-line: underline;
+      color: black;
+      background-color: blanchedalmond;
+  }
+  
+  #subtitulo {
+      text-transform: capitalize;
+      color: brown;
+      font-size: 20px;
+      font-family: cursive;
+  }
+  
+  .galeria {
+      gap: 15px;
+      padding: 20px;
+      border: 5px solid purple;
+      background-color: cornsilk;
+      display: grid;
+      grid-template-areas:
+      "imag1 imag2"
+      "imag3 imag4"
+      "imag5 imag6"
+      "imag7 imag8"
+  }
+  
+  .galeria>div{
+      display: flex;
+      height: 220px;
+      padding: 10px;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(238, 217, 225);
+      border: 1px solid red;
+  }
+  
+  .imag1 {
+      width: 15rem;
+      grid-area: imag1;
+      border-radius: 20px;
+      border: 1px solid blue;
+  }
+  
+  .imag2 {
+      width: 13rem;
+      grid-area: imag2;
+      border-radius: 20px;
+      border: 1px solid blue;
+  }
+  
+  .imag3 {
+      width: 14rem;
+      grid-area: imag3;
+      border-radius: 20px;
+      border: 1px solid blue;
+  }
+  
+  .imag4 {
+      width: 10rem;
+      grid-area: imag4;
+      border-radius: 20px;
+      border: 1px solid blue;
+  }
+  
+  .imag5 {
+      width: 14rem;
+      grid-area: imag5;
+      border-radius: 20px;
+      border: 1px solid blue;
+  }
+  
+  .imag6 {
+      width: 30rem;
+      grid-area: imag6;
+      border-radius: 20px;
+      border: 1px solid blue;
+  }
+  
+  .imag7 {
+      width: 25rem;
+      grid-area: imag7;
+      border-radius: 20px;
+      border: 1px solid blue;
+  }
+  
+  .imag8 {
+      width: 20rem;
+      grid-area: imag8;
+      border-radius: 20px;
+      border: 1px solid blue;
+  }
+  
+  button{
+      color: cornflowerblue;
+      background-color: darkred;
+      font-size: 13px;
+  }
+  
+  button:active{
+      color: aqua;
+      background-color: black;
+      font-size: 18px;
+  }
+  
+  @media only screen and (min-width: 320px) and (max-width: 480px)  {
+      body {
+          background-color: rgb(141, 235, 238);
+      }
+      .barraNav{
+          flex-direction: column;
+      }
+      .logo {
+        position: relative;
+        margin-top: 170px;
+      }
+      .principal {
+        position: relative;
+        margin-top: 5px;
+        font-size: 50px;
+      }
+      .eslogan {
+          font-size: 29px;
+      }
+  }
+  
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+      body {
+          background-color: rgb(66, 240, 95);
+      }
+      .logo {
+        position: relative;
+        margin-top: 20px;
+      }
+      .eslogan{
+          font-size: 35px;
+      }
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+      background-color: darksalmon;
+    }
+    .logo {
+      position: relative;
+      margin-top: 10px;
+    }
+    .eslogan {
+      font-size: 48px;
+    }
+  }
+
+
+header {
+  background-color: rgb(175, 226, 233);
+}
+header nav .barraNav {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav .barraNav li {
+  list-style: none;
+}
+header nav .barraNav li a {
+  text-decoration: none;
+  color: red;
 }
 
-.navegacion {
-    height: 25px;
-    background-color: rgb(2, 2, 2);
-    border 5px;
+main section .segundoTitulo, main section #subtitulo {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(44, 47, 241);
+  text-decoration: overline;
+}
+main section ol .primero {
+  font-size: 15px;
+  background-color: rgb(152, 152, 247);
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+main section ol .segundoS {
+  font-size: 15px;
+  background-color: violet;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+main section ol .tercero {
+  font-size: 15px;
+  background-color: pink;
+  border-radius: 10px;
+  padding: 0.3rem;
 }
 
-.barraNav {
-    display: flex;
-    list-style: none;
-}
-
-.nav {
-    flex-grow: 1;
-    flex-shrink: 1;
-    display: inline;
-    border-style: solid;
-}
-
-.nav:hover a {
-background-color: aquamarine;
-color: black;
-}
-
-.boton1 {
-    color: azure;
-    background-color: green;
-    font-size: 15px;
-}
-.boton1:active{
-    color: azure;
-    background-color: blue;
-    font-size: 30px;
-}
-
-.logo {
-    text-align: right;
-}
-
-.principal {
-    text-align: center;
-    font-size: 80px;
-    text-transform: uppercase;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(168, 39, 39);
-}
-
-.eslogan {
-    text-align: center;
-    color: rgb(35, 190, 74);
-    font-family: fantasy;
-    font-size: 50px;
-    height: 150px;
-    background-image: url(https://i.blogs.es/9b8259/blur-bowed-stringed-instrument-close-up-1029411/450_1000.jpg);
-}
-
-.segundoTitulo {
-    text-align: center;
-    text-transform: uppercase;
-    height: 200px;
-    background-image: url("./imagenes/momento-verdad-ventas.jpg");
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.segundoTitulo::first-letter {
-    color: red;
-}
-
-.segundo {
-    text-align: justify;
-    text-decoration-line: underline;
-    color: black;
-    background-color: blanchedalmond;
-}
-
-#subtitulo {
-    text-transform: capitalize;
-    color: brown;
-    font-size: 20px;
-    font-family: cursive;
-}
-
-.galeria {
-    gap: 15px;
-    padding: 20px;
-    border: 5px solid purple;
-    background-color: cornsilk;
-    display: grid;
-    grid-template-areas:
-    "imag1 imag2"
-    "imag3 imag4"
-    "imag5 imag6"
-    "imag7 imag8"
-}
-
-.galeria>div{
-    display: flex;
-    height: 220px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(238, 217, 225);
-    border: 1px solid red;
-}
-
-.imag1 {
-    width: 15rem;
-    grid-area: imag1;
-    border-radius: 20px;
-    border: 1px solid blue;
-}
-
-.imag2 {
-    width: 13rem;
-    grid-area: imag2;
-    border-radius: 20px;
-    border: 1px solid blue;
-}
-
-.imag3 {
-    width: 14rem;
-    grid-area: imag3;
-    border-radius: 20px;
-    border: 1px solid blue;
-}
-
-.imag4 {
-    width: 10rem;
-    grid-area: imag4;
-    border-radius: 20px;
-    border: 1px solid blue;
-}
-
-.imag5 {
-    width: 14rem;
-    grid-area: imag5;
-    border-radius: 20px;
-    border: 1px solid blue;
-}
-
-.imag6 {
-    width: 30rem;
-    grid-area: imag6;
-    border-radius: 20px;
-    border: 1px solid blue;
-}
-
-.imag7 {
-    width: 25rem;
-    grid-area: imag7;
-    border-radius: 20px;
-    border: 1px solid blue;
-}
-
-.imag8 {
-    width: 20rem;
-    grid-area: imag8;
-    border-radius: 20px;
-    border: 1px solid blue;
-}
-
-button{
-    color: cornflowerblue;
-    background-color: darkred;
-    font-size: 13px;
-}
-
-button:active{
-    color: aqua;
-    background-color: black;
-    font-size: 18px;
-}
+/*# sourceMappingURL=styles.css.map */

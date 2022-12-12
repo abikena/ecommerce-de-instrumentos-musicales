@@ -1,0 +1,16 @@
+header{
+    background-color: $fondoColor;
+    nav {
+        .barraNav {
+            display: flex;
+            justify-content: space-evenly;
+            li {
+                list-style: none;
+                a{
+                    text-decoration: none;
+                    color: red
+                }
+            }
+        }
+    }
+}

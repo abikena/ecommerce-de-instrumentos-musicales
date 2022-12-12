@@ -1,0 +1,40 @@
+header {
+  background-color: rgb(175, 226, 233);
+}
+header nav .barraNav {
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav .barraNav li {
+  list-style: none;
+}
+header nav .barraNav li a {
+  text-decoration: none;
+  color: red;
+}
+
+main section .segundoTitulo, main section #subtitulo {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(44, 47, 241);
+  text-decoration: overline;
+}
+main section ol .primero {
+  font-size: 15px;
+  background-color: rgb(152, 152, 247);
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+main section ol .segundoS {
+  font-size: 15px;
+  background-color: violet;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+main section ol .tercero {
+  font-size: 15px;
+  background-color: pink;
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+
+/*# sourceMappingURL=base.css.map */

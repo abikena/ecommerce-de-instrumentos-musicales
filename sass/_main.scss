@@ -1,0 +1,25 @@
+main {
+    section {
+        .segundoTitulo {
+            font-family: $tipografia;
+            color: rgb(44, 47, 241);
+            text-decoration: overline;
+        }
+        #subtitulo {
+          @extend .segundoTitulo
+        }
+    }
+    section {
+        ol{
+            .primero{
+                @include caracteristicas (rgb(152, 152, 247)); 
+            }
+            .segundoS{
+                @include caracteristicas (violet);
+            }
+            .tercero{
+                @include caracteristicas (pink);
+            }
+        }
+    }
+}

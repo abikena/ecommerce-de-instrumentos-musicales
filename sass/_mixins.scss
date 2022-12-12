@@ -1,0 +1,6 @@
+@mixin caracteristicas ($fondoCaracteristicas) {
+    font-size: 15px;
+    background-color: $fondoCaracteristicas;
+    border-radius: 10px;
+    padding: .3rem;
+}
