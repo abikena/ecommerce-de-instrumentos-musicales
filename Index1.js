@@ -4,20 +4,19 @@ function suma(num1, num2, num3){
 }
 suma (30, 50, 12);
 
-
-//function comparacion () {    
-//    console.log ()
-//}
-//comparacion (25, 15);
+ 
+function comparacion(numero1, numero2){
+    let operacion = numero1 > numero2;
+    console.log("Esta operacion es", operacion);
+}
+comparacion (60, 80); 
 
 
 // ARROW FUNCTION (funcion flecha)
 
-//function sumaComparacion(uno, dos) {
-//   return console.log("estas en la => con dos parametros");
-//}
-//sumaComparacion (92, 25);
+const funcionesArrow = (resultadoSuma, comNum1, comNum2) => console.log("Estas en la => con mas de 1 parametro. El resultado de la suma fue " + resultadoSuma + " y se comparo si, " + comNum1 + " era mayor que " + comNum2 + ", lo cual arrojo un resultado falso.");
 
+funcionesArrow(92, 60, 80);
 
 const carritoDeCompras = [];
 
