@@ -4,7 +4,7 @@ function suma(num1, num2, num3){
 }
 suma (30, 50, 12);
 
- 
+
 function comparacion(numero1, numero2){
     let operacion = numero1 > numero2;
     console.log("Esta operacion es", operacion);
@@ -76,3 +76,43 @@ const [saludo, numero,,texto] = productos;
 console.log (saludo);
 console.log (numero);
 console.log (texto);
+
+
+////////////////////////////////////////////////////////////////////////
+
+//Operador ternario
+
+Number = 23;
+let edad = (Number >= 18 ? true : false);
+
+if(edad >= true){
+    console.log('Valido');
+}else{
+    console.log('No valido');
+}
+
+//array de productos
+
+const instrumentos = [
+    {id: 1, img: "", nombre: "bajo pasivo", color: "blanco", precio: 10000},
+    {id: 2, img: "", nombre: "violin", color: "cafe", precio: 7500},
+    {id: 3, img: "", nombre: "pandero", color: "gris", precio: 900},
+    {id: 4, img: "", nombre: "saxofon", color: "negro", precio: 12764},
+]
+
+//console.log(instrumentos);
+
+const carrito = [];
+
+//console.log ("Por el momento el carrito tiene : ", carrito);
+//carrito.push (instrumentos[3]);
+
+//console.log ("Por el momento el carrito tiene : ", carrito);
+
+//for (inicio; final; actualizador){
+//    bloque de codigo que querramos hacer por cada iteracion
+//}
+
+for (let i = 0; i < instrumentos.length; i++){
+    console.log ("Los productos que contiene este arrey: ", instrumentos[i])
+}
