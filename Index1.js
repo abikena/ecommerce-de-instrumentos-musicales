@@ -116,3 +116,23 @@ const carrito = [];
 for (let i = 0; i < instrumentos.length; i++){
     console.log ("Los productos que contiene este arrey: ", instrumentos[i])
 }
+
+
+// BLUCLE SWITCH
+
+let Entradas = "30";
+
+switch(Entradas){
+    case "20":
+        console.log("Promoción al 2x1 en dulceria");
+        break;
+    case "15":
+        console.log("Boletos a mitad de precio");
+        break;
+    case "30":
+        console.log("En la compra de 3 boletos, llevese un hotdog gratis");
+        break;
+    default:
+        console.log("No aplica ninguna promoción");
+        break;
+}
