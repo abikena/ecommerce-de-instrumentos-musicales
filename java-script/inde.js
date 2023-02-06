@@ -36,3 +36,5 @@ do {
 //    alert ("Hola" + nombre + "\nEsta dentro de un ciclo. Para escapar de el, porfavor escribe `SALIR`.");
 //    nombre = prompt ("Para continuar escriba SALIR").toUpperCase();
 //}
+
+

@@ -97,7 +97,8 @@ const instrumentos = [
     {id: 1, img: "", nombre: "bajo pasivo", color: "blanco", precio: 10000},
     {id: 2, img: "", nombre: "violin", color: "cafe", precio: 7500},
     {id: 3, img: "", nombre: "pandero", color: "gris", precio: 900},
-    {id: 4, img: "", nombre: "saxofon", color: "negro", precio: 12764},
+    {id: 4, img: "", nombre: "saxofon", color: "negro", precio: 12764.56},
+    {id: 5, img: "", nombre: "plumilla", color: "azul", precio: 10}, 
 ]
 
 //console.log(instrumentos);
@@ -113,9 +114,21 @@ const carrito = [];
 //    bloque de codigo que querramos hacer por cada iteracion
 //}
 
-for (let i = 0; i < instrumentos.length; i++){
-    console.log ("Los productos que contiene este arrey: ", instrumentos[i])
+console.log("Carrito de compras:" , carrito);
+
+const agregarCarrito = (producto, carrito)=> {
+    carrito.push (producto);
+    console.log (`El producto ha sido agregado con exito`);
 }
+
+agregarCarrito(instrumentos [0], carrito);
+agregarCarrito(instrumentos [1], carrito);
+agregarCarrito(instrumentos [2], carrito);
+agregarCarrito(instrumentos [3], carrito);
+
+// for (let i = 0; i < instrumentos.length; i++){
+//     console.log ("Los productos que contiene este arrey: ", instrumentos[i])
+// }
 
 
 // BLUCLE SWITCH
@@ -136,3 +149,135 @@ switch(Entradas){
         console.log("No aplica ninguna promoción");
         break;
 }
+
+//////////////////////////////////////////////////////////////////
+
+// FOR EACH
+
+instrumentos.forEach (producto => {
+    console.log ("El nombre de los productos es:" , producto.nombre + " y su precio es", producto.precio)
+})
+
+// FILTER
+
+const preciosMayor = instrumentos.filter(elemento => elemento.precio > 200);
+
+console.log ("Los productos con precios mayor a 200 son: ", preciosMayor);
+
+// const nombreProducto = instrumentos.filter (elem => elem.nombre.includes("x"))
+
+// console.log (nombreProducto, "INCLUYE?")
+
+// FIND
+
+const productoSeleccionado = instrumentos.find (elementos => elementos.id === 3);
+
+console.log ("El producto que el usuario quiere comparar es: ", productoSeleccionado);
+
+console.log ("El carrito contiene los siguientes porductos: ", carrito);
+
+agregarCarrito (productoSeleccionado, carrito);
+
+console.log ("El carrito contiene los siguientes porductos: ", carrito);
+
+//SOME 
+
+const nombreProducto = instrumentos.some (elemento => elemento.nombre === "teclado");
+
+console.log ("¿Existe el producto? ", nombreProducto);
+
+
+//MAP
+
+// console.log("Precios normales: ", instrumentos);
+
+// const mitadPrecio = instrumentos.map (elementos => elementos.precio / 2);
+
+// console.log ("El dia de hoy tenemos una oferta del 50%", mitadPrecio);
+
+//REDUCE (ACUMULADOR, VALORES ACTUALES //////// OPCIONAL: VALOR INICIAL)
+
+//OPCION A: Mezcla map y reduce.
+
+const precios = instrumentos.map (elementos => elementos.precio);
+
+console.log("Precios del carrito: ", precios);
+
+const precioFinal = precios.reduce ((total, precio)=>total + precio);
+
+console.log ("Precio apagar: ", precioFinal);
+
+const promedio = precioFinal / instrumentos.length;
+console.log (promedio);
+
+//OPCION B: Solo reduce
+
+const precioSO = carrito.reduce ((total, elemen)=>total + elemen.precio, 0);
+
+console.log ("Opcion B, total de precio: ", precioSO); 
+
+if (precioFinal >= 1000) {
+    console.log ("Envio gratis. Total: ", precioFinal);
+}else {
+    console.log ("Total + envio: ", precioSO);
+}
+
+// SORT 
+
+const alfabeticamente = instrumentos.sort ((productoA , productoZ) => {
+    if (productoA.nombre == productoZ.nombre){
+        return 0
+    }else if(productoA.nombre < productoZ.nombre){
+        return -1
+    }else {
+        return 1
+    }
+})
+
+console.log ("Los productos estan oredenados de manera alfabetica", alfabeticamente);
+
+console.log ("Los productos estan ordenados alfabeticamente", alfabeticamente); 
+
+///////////////////////////////////////////////////////////
+
+// const productoMasCostoso = instrumentos.map (elementos => elementos.precio);
+// Math.max (productoMasCostoso);
+// const valorMaximo = (productoMasCostoso);
+// console.log (valorMaximo);
+const redondeado = Math.floor (12764.56);
+console.log (redondeado);
+
+
+// const precioFinal = precios.reduce ((total, precio)=>total + precio);
+
+// console.log ("Precio apagar: ", precioFinal);
+
+// const promedio = precioFinal / instrumentos.length;
+// console.log (promedio);
+
+
+// const instrumentosMusicales = [
+//     { id: 1, img: "./imagnes/logo.png", nombre: "Bajo", precio: 6000, cantidad: 1 },
+//     { id: 2, img: "./imagnes/logo.png", nombre: "Guitarra", precio: 6500, cantidad: 1 },
+//     { id: 3, img: "./imagnes/logo.png", nombre: "Saxofon", precio: 2500, cantidad: 1 },
+//     { id: 4, img: "./imagnes/logo.png", nombre: "Violin", precio: 3000, cantidad: 1 },
+//     { id: 5, img: "./imagnes/logo.png", nombre: "Teclado", precio: 10000, cantidad: 1 },
+// ];
+
+// const carritoCompras = [];
+
+// MOSTRAR PRODUCTOS DINAMICAMENTE DESDE EL DOM 
+
+// const contenedorProductos = document.getElementById ("contenedorProductos");
+
+// instrumentosMusicales.forEach (instrument => {
+//     contenedorProductos.innerHTML += 
+//     `
+//     <div>
+//         <img src="${instrument.img}" alt="${instrument.nombre}">
+//         <h2>${instrument.nombre} </h2>
+//         <p>Precio : ${instrument.precio} </p>
+//         <button id="${instrument.id}">Agregar al carrito </button>
+//     </div>
+//     `
+// })
